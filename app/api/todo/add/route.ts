@@ -13,6 +13,6 @@ const saveTodos = async (values: any) => {
 
 export async function POST(req: NextRequest) {
     const data = await req.json()
-    saveTodos(data);
+    await saveTodos(data);
     return NextResponse.json(data);
 }
