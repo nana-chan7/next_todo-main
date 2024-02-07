@@ -36,10 +36,13 @@ const TodoForm = ({
                 autoCompleteTags={autoCompleteTags}
                 placeholder="Enter tags..."
             />
+            
             <ClickButton
                 label="Add"
                 onClick={addClickHandler}
                 disabled={!inputValue} />
+
+
         </div>
     );
 }
