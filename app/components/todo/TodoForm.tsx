@@ -27,13 +27,22 @@ const TodoForm = ({
         <div>
             <Input
                 value={inputValue}
-                onChange={setInputValue}
-                placeholder="Enter Todo..." />
+                onChange={(value) => setInputValue(value)}
+                placeholder="Enter Todo..."
+            />
+
+            <TagsInput
+                tags={tags}
+                onChangeTags={setTags} 
+                autoCompleteTags={autoCompleteTags}
+                placeholder="Enter tags..."
+            />
 
             <ClickButton
                 label="Add"
                 onClick={addClickHandler}
-                disabled={!inputValue} />
+                disabled={!inputValue || tags.length === 0}
+            />
         </div>
     );
 }
